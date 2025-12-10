@@ -1,0 +1,397 @@
+/* --- RESET Y ESTILOS GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: #555;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* Variables de color */
+:root {
+    --dark-blue: #1a2b49;
+    --bright-green: #00e699;
+    --light-gray: #f9f9f9;
+    --text-grey: #888;
+}
+
+/* Contenedor central */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-green {
+    background-color: var(--bright-green);
+    color: var(--dark-blue);
+}
+
+.btn-dark {
+    background-color: var(--dark-blue);
+    color: #fff;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--dark-blue);
+    color: var(--dark-blue);
+}
+
+/* --- HERO SECTION (HEADER) --- */
+.hero {
+    background-color: var(--dark-blue);
+    /* Aqui iría tu imagen de fondo del hero */
+    /* Ajusta este gradiente o imagen segun lo que tengas */
+    background-image: linear-gradient(rgba(26, 43, 73, 0.8), rgba(26, 43, 73, 0.8)); 
+    color: #fff;
+    padding-bottom: 80px;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo-placeholder {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.hero-content {
+    margin-top: 60px;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+/* --- FEATURES (ICONOS) --- */
+.features {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 28px;
+    color: var(--dark-blue);
+    margin-bottom: 60px;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.feature-item {
+    flex: 1;
+    min-width: 250px;
+}
+
+.icon-box {
+    height: 60px;
+    margin-bottom: 20px;
+    /* Placeholder para icono */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-item h3 {
+    margin-bottom: 10px;
+    color: var(--dark-blue);
+    font-size: 18px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: var(--text-grey);
+}
+
+/* --- SECCION DIAGONAL (INFO + GREEN) --- */
+/* Contenedor wrapper para el efecto visual */
+.info-sections-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+
+/* El fondo verde inclinado */
+.green-shape-bg {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bright-green);
+    transform: skewY(-5deg);
+    z-index: -1;
+    transform-origin: top left;
+}
+
+.info-block {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.info-text {
+    flex: 1;
+}
+
+.info-image {
+    flex: 1;
+}
+
+.info-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.info-block h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--dark-blue);
+}
+
+.info-block p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Ajustes específicos para el bloque sobre verde */
+.info-block.on-green h2, 
+.info-block.on-green p {
+    color: var(--dark-blue); /* El texto sobre verde en la imagen es oscuro */
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* --- PRICING --- */
+.pricing {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.pricing h2 {
+    font-size: 32px;
+    margin-bottom: 60px;
+    color: var(--dark-blue);
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    border: 1px solid #eee;
+    padding: 40px 30px;
+    width: 300px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.price-card.dark {
+    background-color: var(--dark-blue);
+    color: #fff;
+    border: none;
+    transform: scale(1.05); /* Un poco mas grande */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.plan-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.price {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.price span {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.features-list {
+    list-style: none;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 2.5;
+}
+
+/* --- LOGOS CLIENTES --- */
+.clients {
+    background-color: var(--light-gray);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.clients-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.client-logo {
+    height: 40px;
+    opacity: 0.6;
+}
+
+/* --- CONTACTO / FOOTER --- */
+.contact {
+    background-color: var(--dark-blue);
+    color: #fff;
+    padding: 80px 0 40px 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    flex: 1;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: var(--bright-green);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.btn-full {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-copy {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.social-icons span {
+    margin-left: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .info-block {
+        flex-direction: column;
+        text-align: center;
+    }
+    .info-block.reverse {
+        flex-direction: column;
+    }
+    .green-shape-bg {
+        top: 50%;
+        transform: skewY(0);
+    }
+}
